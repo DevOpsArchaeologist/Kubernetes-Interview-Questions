@@ -1,0 +1,149 @@
+What is a Kubernetes Pod?
+A Pod is the smallest deployable unit in Kubernetes that encapsulates one or more containers.
+
+How do you scale a Kubernetes Deployment?
+Use kubectl scale --replicas=[n] deployment/[deployment-name].
+
+What is the difference between a Deployment and a StatefulSet?
+Deployments manage stateless applications, while StatefulSets manage stateful applications with stable network identities.
+
+What are DaemonSets used for in Kubernetes?
+DaemonSets ensure a copy of a Pod runs on all or some nodes.
+
+How does Kubernetes handle container failures?
+Kubernetes automatically restarts containers through Liveness and Readiness Probes.
+
+What is the role of etcd in Kubernetes?
+etcd is a key-value store used as the backing store for all Kubernetes cluster data.
+
+How do you perform a rolling update in Kubernetes?
+Update the image in the Deployment or use kubectl set image.
+
+What is a Namespace in Kubernetes?
+A Namespace is a way to divide cluster resources between multiple users or teams.
+
+What is a ConfigMap?
+ConfigMaps are used to decouple environment-specific configuration from application code.
+
+What is the role of a Service in Kubernetes?
+A Service defines a stable IP and DNS name to access Pods.
+
+What is the difference between ClusterIP, NodePort, and LoadBalancer Services?
+ClusterIP is internal, NodePort exposes services on nodes' IP, and LoadBalancer provisions an external IP.
+
+What is a Kubelet?
+Kubelet is an agent running on each node that ensures containers are running as expected.
+
+What is the function of Kube-proxy?
+Kube-proxy manages network rules for Kubernetes Services.
+
+What is Helm in Kubernetes?
+Helm is a package manager for Kubernetes, used for managing charts (pre-configured Kubernetes resources).
+
+How do you roll back a Kubernetes deployment?
+Use kubectl rollout undo deployment/[deployment-name].
+
+What is a Kubernetes Ingress?
+Ingress exposes HTTP/S routes from outside the cluster to services inside it.
+
+How do you debug a failing Pod?
+Use kubectl logs to view logs or kubectl describe pod for more information.
+
+What is a PersistentVolume (PV)?
+A PV is a piece of storage in the cluster that has been provisioned for use by Pods.
+
+What is the difference between a PersistentVolume and a PersistentVolumeClaim?
+A PersistentVolume represents the physical storage, while a PersistentVolumeClaim requests that storage.
+
+What are Kubernetes Labels?
+Labels are key-value pairs attached to objects, used to identify and organize resources.
+
+What is a Taint in Kubernetes?
+Taints prevent Pods from being scheduled on certain nodes unless a Toleration is added to the Pod.
+
+How do you perform node draining in Kubernetes?
+Use kubectl drain [node-name] to safely evict Pods before node maintenance.
+
+What are Kubernetes Secrets?
+Secrets store sensitive information like passwords, tokens, or keys in an encrypted format.
+
+What is the purpose of a Readiness Probe?
+It checks if a container is ready to accept traffic.
+
+What is a Liveness Probe in Kubernetes?
+It checks whether a container is running and restarts it if it fails.
+
+What is the role of RBAC in Kubernetes?
+RBAC controls access to Kubernetes resources based on roles and role bindings.
+
+How do you expose a Kubernetes service externally?
+Use a LoadBalancer or configure an Ingress resource.
+
+What is the difference between a Job and a CronJob in Kubernetes?
+A Job runs a task to completion, while a CronJob schedules jobs at specific intervals.
+
+How do you check the status of all nodes in a Kubernetes cluster?
+Use kubectl get nodes.
+
+What is a Kubernetes ReplicaSet?
+A ReplicaSet ensures a specified number of pod replicas are running at all times.
+
+How do you get detailed information about a Pod?
+Use kubectl describe pod [pod-name].
+
+What is a Kubernetes Admission Controller?
+Admission controllers are plugins that intercept requests to the Kubernetes API for validation.
+
+What is the purpose of kube-scheduler?
+The kube-scheduler assigns Pods to nodes based on resource availability and constraints.
+
+What is a nodeSelector?
+nodeSelector is a field that restricts Pod placement to specific nodes.
+
+What is a Kubernetes Cluster Autoscaler?
+It automatically adjusts the size of the cluster based on resource demands.
+
+How does Kubernetes handle Pod networking?
+Kubernetes uses a flat network model where all Pods can communicate with each other, often via CNI plugins.
+
+How do you limit resources for a Pod?
+Define resource requests and limits in the Pod's YAML specification.
+
+What are Kubernetes Tolerations?
+Tolerations allow Pods to be scheduled on nodes with matching Taints.
+
+What is the purpose of the Kubernetes API server?
+The API server is the front end for the Kubernetes control plane, handling all REST requests.
+
+How can you run a one-off command in a running Pod?
+Use kubectl exec [pod-name] -- [command].
+
+What is a VolumeMount in Kubernetes?
+VolumeMounts are used to mount storage volumes into containers in a Pod.
+
+What is the difference between soft and hard limits in Kubernetes?
+Soft limits are resource requests, and hard limits are enforced resource ceilings.
+
+How do you create a Kubernetes namespace?
+Use kubectl create namespace [namespace-name].
+
+What is Horizontal Pod Autoscaler (HPA)?
+HPA automatically scales the number of pod replicas based on resource utilization metrics.
+
+What is the function of the kube-controller-manager?
+It runs control loops that regulate the cluster state, such as Node and Deployment controllers.
+
+What is the use of Kubernetes Network Policies?
+Network Policies control traffic flow at the IP address level between Pods.
+
+How do you update a running deployment in Kubernetes?
+Modify the deployment manifest or use kubectl set image or kubectl apply.
+
+What is the purpose of the kubeconfig file?
+kubeconfig provides authentication information to interact with the Kubernetes cluster.
+
+What is a Sidecar container?
+A Sidecar container runs alongside the main container in a Pod to complement its functionality.
+
+How do you schedule a Pod on a specific node?
+Use nodeSelector, nodeAffinity, or apply specific node labels.
